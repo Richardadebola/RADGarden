@@ -1,0 +1,121 @@
+/* site.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: lightblue;
+    ;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+            header nav ul li a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+
+.hero {
+    background-image: url('../image/bac.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.shop {
+    background-image: url('../images/two.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about {
+    background-color: navajowhite ;
+    background-size: cover;
+    background-position: center;
+    color: green;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact {
+    background-color: navajowhite;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+    .hero h2, .shop h2, .about h2, .contact h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .hero p, .shop p, .about p, .contact p {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+.btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #3e8e41;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+    .btn:hover {
+        background-color: #e0e0e0;
+    }
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    footer p {
+        margin: 0;
+    }
+/* site.css */
+

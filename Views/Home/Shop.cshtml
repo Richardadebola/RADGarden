@@ -1,0 +1,100 @@
+﻿
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<section class="hero" style="background-image: url('/image/two.jpg');">
+    <div class="container">
+        <h2><b>Shop at RADGarden</b></h2>
+        <p>Find the perfect plants and garden accessories for your home.</p>
+    </div>
+</section>
+
+<section class="section" style="background-image: url('/image/twoe.jpg');">
+    <div class="container">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            @foreach (var product in Model)
+            {
+                <div class="product-item">
+                    <img src="@product.ImageUrl" alt="@product.Name" class="product-image" />
+                    <h3>@product.Name</h3>
+                    <p>@product.Description</p>
+                    <p>Price: $@product.Price</p>
+
+                    <button class="details-button" onclick="toggleDetails('@product.Id')">Show Details</button>
+                    <div id="details-@product.Id" class="product-details">
+                        <p>Category: @product.Category</p>
+                        <p>Stock: @product.Stock</p>
+                        <p>Rating: @product.Rating</p>
+                        <p>Dimensions: @product.Dimensions</p>
+                        <p>Weight: @product.Weight kg</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product-item {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        width: 200px;
+        text-align: center;
+        position: relative;
+    }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+    .details-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .details-button:hover {
+            background-color: #0056b3;
+        }
+
+    .product-details {
+        display: none;
+        text-align: left;
+        margin-top: 10px;
+        background: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+</style>
+
+<script>
+    function toggleDetails(id) {
+        var details = document.getElementById('details-' + id);
+        if (details.style.display === 'none' || details.style.display === '') {
+            details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
+        }
+    }
+</script>
